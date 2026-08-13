@@ -15,6 +15,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/news">最新消息</RouterLink>
         <RouterLink to="/contact">聯絡我們</RouterLink>
+        <RouterLink to="/article/1">文章 1</RouterLink>
       </nav>
     </div>
   </header>
