@@ -19,6 +19,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/edit">編輯文章</RouterLink>
         <RouterLink to="/user">使用者中心</RouterLink>
         <RouterLink to="/nav-test">導航測試</RouterLink>
+        <RouterLink to="/admin">管理後台</RouterLink>
       </nav>
     </div>
   </header>

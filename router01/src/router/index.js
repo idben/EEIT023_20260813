@@ -9,6 +9,7 @@ import UserPostsView from '@/views/UserPostsView.vue'
 import UserProfileView from '@/views/UserProfileView.vue'
 import UserSettingsView from '@/views/UserSettingsView.vue'
 import NavTestView from '@/views/NavTestView.vue'
+import AdminView from '@/views/AdminView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -71,6 +72,18 @@ const router = createRouter({
       path: '/nav-test',
       name: 'navtest',
       component: NavTestView
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: AdminView,
+      beforeEnter: () => {
+        const isLogin = localStorage.getItem('isLogin') == 'true'
+        if (!isLogin) {
+          alert('沒有管理權限!')
+          return false
+        }
+      }
     },
   ],
 })
