@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, RouterLink } from 'vue-router'
 
 const articles = ref([
     { id: 1, title: 'Vue 3 新手入門', summary: '從零開始學習 Vue 3 的基礎概念' },
@@ -28,7 +28,11 @@ const dataDisplay = ref('table') // grid/table
             <div class="card card-body h200px">
                 <h3>{{ article.title }}</h3>
                 <p>{{ article.summary }}</p>
-                <button class="btn btn-primary btn-sm">閱讀更多</button>
+                <RouterLink :to="{
+                    name: 'ArticleDetail', params: {
+                        id: article.id
+                    }
+                }" class="btn btn-primary btn-sm">閱讀更多</RouterLink>
             </div>
         </div>
     </div>
@@ -48,7 +52,13 @@ const dataDisplay = ref('table') // grid/table
                 <th scope="row">{{ index + 1 }}</th>
                 <td>{{ article.title }}</td>
                 <td>{{ article.summary }}</td>
-                <td><button class="btn btn-primary btn-sm">閱讀更多</button></td>
+                <td>
+                    <RouterLink :to="{
+                        name: 'ArticleDetail', params: {
+                            id: article.id
+                        }
+                    }" class="btn btn-primary btn-sm">閱讀更多</RouterLink>
+                </td>
             </tr>
         </tbody>
     </table>
