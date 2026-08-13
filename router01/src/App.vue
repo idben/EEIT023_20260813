@@ -18,6 +18,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/article/1">文章 1</RouterLink>
         <RouterLink to="/edit">編輯文章</RouterLink>
         <RouterLink to="/user">使用者中心</RouterLink>
+        <RouterLink to="/nav-test">導航測試</RouterLink>
       </nav>
     </div>
   </header>
