@@ -1,12 +1,20 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-export default useCartStore = defineStore(
+export const useCartStore = defineStore(
     'cart',
     () => {
-        const items = ref([])
+        const items = ref([
+            {
+                id: 1,
+                price: 50,
+                quantity: 5
+            }
+        ])
 
-        const totalItems = computed(() => { })
+        const totalItems = computed(() =>
+            items.value.reduce((sum, item) => sum + item.quantity, 0)
+        )
 
         const totalMoney = computed(() => { })
 
