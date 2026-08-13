@@ -50,4 +50,8 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach((to) => {
+  document.title = to.meta.title || 'Vue SPA'
+})
+
 export default router
