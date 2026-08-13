@@ -87,5 +87,8 @@ const router = createRouter({
     },
   ],
 })
+// 全域守衛
+// router.beforeEach((to, from) => {
+// })
 
 export default router
