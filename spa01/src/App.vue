@@ -6,7 +6,7 @@ import NavBar from './components/NavBar.vue';
 <template>
   <div class="container py-3">
     <NavBar />
-    <div class="card card-body">
+    <div class="card card-body mt-3">
       <RouterView />
     </div>
   </div>
